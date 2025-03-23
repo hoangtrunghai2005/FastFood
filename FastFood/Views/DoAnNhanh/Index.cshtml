@@ -1,0 +1,52 @@
+﻿@model IEnumerable<FastFood.Models.DoAnNhanh>
+
+@{
+    ViewData["Title"] = "Danh Sách Món Ăn";
+    var tuKhoa = ViewBag.TuKhoa as string; // Lấy từ khóa từ Controller
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="mb-3">
+    <a class="btn btn-primary" href="@Url.Action("Create", "DoAnNhanh")">
+        <i class="fas fa-plus"></i> Thêm món ăn mới
+    </a>
+</div>
+
+<!-- Form tìm kiếm -->
+<form asp-controller="DoAnNhanh" asp-action="Index" method="get" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="tuKhoa" value="@tuKhoa" class="form-control" placeholder="Tìm kiếm món ăn..." />
+        <button class="btn btn-primary" type="submit">Tìm</button>
+    </div>
+</form>
+
+@if (!Model.Any())
+{
+    <p class="text-muted">Không tìm thấy kết quả phù hợp.</p>
+    <a href="@Url.Action("Index", "DoAnNhanh")" class="btn btn-secondary">Hiển thị toàn bộ món ăn</a>
+}
+else
+{
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="@Url.Content(string.IsNullOrEmpty(item.HinhAnhUrl) ? "~/images/default-image.jpg" : item.HinhAnhUrl)"
+                         class="card-img-top" alt="Hình ảnh món ăn" style="max-height:200px; object-fit:cover;" />
+                    <div class="card-body">
+                        <h5 class="card-title">@item.MonAn</h5>
+                        <p class="card-text">@item.MoTa</p>
+                        <p class="card-text">@string.Format("{0:N0} VND", item.Gia)</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-info btn-sm" href="@Url.Action("Details", "DoAnNhanh", new { id = item.ID })">Chi tiết</a>
+                        <a class="btn btn-warning btn-sm" href="@Url.Action("Edit", "DoAnNhanh", new { id = item.ID })">Sửa</a>
+                        <a class="btn btn-danger btn-sm" href="@Url.Action("Delete", "DoAnNhanh", new { id = item.ID })">Xóa</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

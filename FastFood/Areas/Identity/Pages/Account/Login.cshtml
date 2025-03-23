@@ -1,0 +1,29 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Đăng Nhập";
+}
+
+<div class="login-page">
+    <div class="login-card">
+        <h3 class="text-center text-primary mb-4">Chào mừng trở lại</h3>
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control" placeholder="Email">
+                <label asp-for="Input.Email">Email</label>
+                <span asp-validation-for="Input.Email" class="text-danger small"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Password" class="form-control" type="password" placeholder="Mật khẩu">
+                <label asp-for="Input.Password">Mật khẩu</label>
+                <span asp-validation-for="Input.Password" class="text-danger small"></span>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 py-2">Đăng Nhập</button>
+        </form>
+        <hr class="mt-4">
+        <p class="text-center mb-0">
+            Chưa có tài khoản?
+            <a asp-page="/Account/Register" class="text-decoration-none text-primary">Đăng ký ngay</a>
+        </p>
+    </div>
+</div>

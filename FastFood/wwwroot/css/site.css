@@ -1,0 +1,222 @@
+/* Import phông chữ từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Toàn trang */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* Thanh điều hướng */
+.navbar {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .navbar .navbar-brand {
+        font-weight: 700;
+        color: #3498db;
+    }
+
+        .navbar .navbar-brand:hover {
+            color: #2980b9;
+        }
+
+    .navbar .nav-link {
+        font-weight: 500;
+        color: #2c3e50;
+    }
+
+        .navbar .nav-link:hover {
+            color: #3498db;
+        }
+
+    /* Nút trong thanh điều hướng */
+    .navbar .btn {
+        border-radius: 30px;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        transition: transform 0.2s ease;
+    }
+
+    .navbar .btn-login {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+    }
+
+        .navbar .btn-login:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+    .navbar .btn-register {
+        background-color: #28a745;
+        color: #ffffff;
+        border: none;
+    }
+
+        .navbar .btn-register:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+/* Nội dung chính */
+.container {
+    max-width: 1200px;
+}
+
+/* Nút Thêm vào giỏ */
+.card-footer .btn-success {
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+}
+
+    .card-footer .btn-success:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+    }
+
+/* Nút Đăng nhập khi chưa login */
+.card-footer .btn-secondary {
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+}
+
+    .card-footer .btn-secondary:hover {
+        background-color: #adb5bd;
+        transform: scale(1.05);
+    }
+
+/* Carousel quảng cáo */
+.quangcao-container {
+    width: 100%;
+    margin: 40px 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .quangcao-container .carousel-item img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+/* Form đăng nhập hoặc đăng ký */
+.form-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+    .form-container h2 {
+        margin-bottom: 1.5rem;
+        color: #2c3e50;
+        text-align: center;
+    }
+
+.form-control {
+    border-radius: 30px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #bdc3c7;
+    transition: border-color 0.3s ease;
+}
+
+    .form-control:focus {
+        border-color: #3498db;
+        box-shadow: none;
+    }
+
+/* Nút hành động */
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+    border-radius: 30px;
+    padding: 0.75rem 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #2980b9;
+        transform: scale(1.05);
+    }
+
+    .btn-primary:active {
+        background-color: #1abc9c;
+        transform: scale(0.95);
+    }
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    .footer h5 {
+        font-weight: 700;
+        color: #ffffff;
+    }
+
+    .footer p {
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+
+    .footer a {
+        color: #3498db;
+        text-decoration: none;
+    }
+
+        .footer a:hover {
+            color: #1abc9c;
+        }
+
+/* Nút Đăng nhập */
+.btn-primary {
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #0069d9;
+        transform: scale(1.05);
+    }
+
+/* Nút Đăng ký */
+.btn-register {
+    border-radius: 30px; /* Bo góc */
+    padding: 0.5rem 1rem; /* Khoảng cách bên trong */
+    background-color: #007bff; /* Màu nền mặc định */
+    color: white; /* Màu chữ */
+    border: none; /* Không có đường viền */
+    transition: none; /* Tắt hiệu ứng */
+}
+
+/* Chỉ áp dụng cho trang Đăng nhập */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}

@@ -1,0 +1,56 @@
+﻿@model FastFood.Models.DoAnNhanh
+
+@{
+    ViewData["Title"] = "Tạo Món Ăn Mới";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<!-- Chú ý: form cần có enctype="multipart/form-data" để hỗ trợ upload file -->
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label asp-for="MonAn" class="control-label"></label>
+        <input asp-for="MonAn" class="form-control" />
+        <span asp-validation-for="MonAn" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MoTa" class="control-label"></label>
+        <textarea asp-for="MoTa" class="form-control"></textarea>
+        <span asp-validation-for="MoTa" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Gia" class="control-label"></label>
+        <input asp-for="Gia" class="form-control" />
+        <span asp-validation-for="Gia" class="text-danger"></span>
+    </div>
+
+    <!-- Chỉ có ô upload file ảnh từ máy tính -->
+    <div class="form-group">
+        <label asp-for="ImageFile" class="control-label">Chọn ảnh từ máy tính</label>
+        <input asp-for="ImageFile" class="form-control" type="file" />
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DanhMucID" class="control-label"></label>
+        <select asp-for="DanhMucID" class="form-control" asp-items="ViewBag.DanhMucID"></select>
+        <span asp-validation-for="DanhMucID" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <input type="submit" value="Tạo mới" class="btn btn-primary" />
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

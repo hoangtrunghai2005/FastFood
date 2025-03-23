@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - FastFood</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="@Url.Content("~/css/site.css")" asp-append-version="true" />
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">FastFood</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Menu chính -->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "GioHang")">
+                            <i class="fas fa-shopping-cart"></i> Giỏ Hàng
+                        </a>
+                    </li>
+                </ul>
+                <!-- Menu tài khoản -->
+                <ul class="navbar-nav ms-auto">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <!-- Khi đã đăng nhập -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-circle"></i> @User.Identity.Name
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="/Identity/Account/Manage">Quản lý tài khoản</a>
+                                </li>
+                                <li>
+                                    <form asp-area="Identity" asp-page="/Account/Logout" method="post">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="dropdown-item text-danger">Đăng xuất</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        <!-- Chưa đăng nhập -->
+                        <li class="nav-item">
+                            <a class="btn btn-primary nav-link text-white ms-2" asp-area="Identity" asp-page="/Account/Login">
+                                <i class="fas fa-sign-in-alt"></i> Đăng nhập
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-register" asp-area="Identity" asp-page="/Account/Register">
+                                <i class="fas fa-user-plus"></i> Đăng ký
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel quảng cáo -->
+    @if (!Context.Request.Path.StartsWithSegments("/Identity/Account") && !Context.Request.Path.StartsWithSegments("/GioHang"))
+    {
+        <div id="quangcaoCarousel" class="carousel slide quangcao-container mt-3" data-bs-ride="carousel" data-bs-touch="true">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="@Url.Content("~/images/quangcao4.jpg")" class="d-block w-100 quangcao-img" alt="Quảng cáo 1" />
+                </div>
+                <div class="carousel-item">
+                    <img src="@Url.Content("~/images/quangcao5.jpg")" class="d-block w-100 quangcao-img" alt="Quảng cáo 2" />
+                </div>
+                <div class="carousel-item">
+                    <img src="@Url.Content("~/images/momo.jpg")" class="d-block w-100 quangcao-img" alt="Quảng cáo 3" />
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#quangcaoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#quangcaoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    }
+
+    <!-- Nội dung trang -->
+    <div class="container mt-4">
+        @RenderBody()
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Về Đồ Ăn Nhanh</h5>
+                    <p>Chúng tôi cung cấp các món ăn nhanh, ngon miệng với chất lượng đảm bảo và dịch vụ thân thiện. Hãy thưởng thức hương vị tuyệt vời cùng chúng tôi!</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Liên hệ</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: hoangtrunghai5t9o@gmail.com</li>
+                        <li>Điện thoại: 0123 456 789</li>
+                        <li>Địa chỉ: Xã Phước Đồng, Thành Phố Nha Trang</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Theo dõi</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fab fa-facebook me-2"></i>Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fab fa-twitter me-2"></i>Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fab fa-instagram me-2"></i>Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="mb-0">&copy; @DateTime.Now.Year Đồ Ăn Nhanh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
