@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using FastFood.Data;
-using FastFood.Areas.Identity.Data; // Thay bằng namespace của bạn chứa FastFoodUser
+using FastFood.Areas.Identity.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
