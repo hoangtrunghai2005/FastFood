@@ -18,6 +18,7 @@ namespace FastFood.Controllers
         // Hiển thị danh sách đơn hàng
         public async Task<IActionResult> Index()
         {
+            // Lấy danh sách đơn hàng kèm chi tiết
             var donHangs = await _context.DonHangs
                 .Include(d => d.ChiTietDonHangs)
                 .ThenInclude(c => c.DoAnNhanh)
@@ -25,7 +26,7 @@ namespace FastFood.Controllers
             return View(donHangs);
         }
 
-        // Xem chi tiết đơn hàng
+        // Xem chi tiết một đơn hàng
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,6 +34,7 @@ namespace FastFood.Controllers
                 return NotFound();
             }
 
+            // Lấy đơn hàng theo ID
             var donHang = await _context.DonHangs
                 .Include(d => d.ChiTietDonHangs)
                 .ThenInclude(c => c.DoAnNhanh)
@@ -44,6 +46,19 @@ namespace FastFood.Controllers
             }
 
             return View(donHang);
+        }
+
+        // Xử lý thanh toán với mã QR tĩnh
+        [HttpPost]
+        public JsonResult LayMaQrTinh()
+        {
+            // Trả về mã QR tĩnh và thông báo thành công
+            return Json(new
+            {
+                success = true,
+                qrCodeUrl = "https://qr.sepay.vn/img?acc=96247HTH96247&bank=BIDV", // URL mã QR tĩnh
+                message = "Vui lòng quét mã QR để thanh toán."
+            });
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GtfE62T/MVzWmIXhTGcJTttw2+QVPk5KtAZelcJ3yM0=",
+  "Hash": "2aGv5uAdiFENLTT8JdT7kX0K6WcoIzwazklGLBXaWlM=",
   "Source": "FastFood",
   "BasePath": "_content/FastFood",
   "Mode": "Default",
@@ -2600,12 +2600,12 @@
       "OriginalItemSpec": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\obj\\Debug\\net9.0\\compressed\\jwf78wtuun-3avaxze4as.gz",
+      "Identity": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\obj\\Debug\\net9.0\\compressed\\jwf78wtuun-mll8y9fzuo.gz",
       "SourceId": "FastFood",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/FastFood",
-      "RelativePath": "css/site#[.{fingerprint=3avaxze4as}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=mll8y9fzuo}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -2614,8 +2614,8 @@
       "RelatedAsset": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "086q6nwhg6",
-      "Integrity": "AJxSzfLBPMSsC6b7WJ4x3taoAjHseUClXP7tJ0kDqDg=",
+      "Fingerprint": "v8mxw1d5tp",
+      "Integrity": "IT39+fm9re2huj1hlghfONC+PWSItnwh6YZFVMQmIRE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\css\\site.css"
@@ -4042,8 +4042,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3avaxze4as",
-      "Integrity": "28mPQV77NXMsehlVLCaZIXdB+buca81/uZbp7MG44rE=",
+      "Fingerprint": "mll8y9fzuo",
+      "Integrity": "pgrwFc0FKhiFuy8yKYlqoBloRIC8aFluipIGKaZu2ws=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -4425,6 +4425,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\pizza_hs.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\images\\QR.jpg",
+      "SourceId": "FastFood",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\",
+      "BasePath": "_content/FastFood",
+      "RelativePath": "images/QR#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "90rv0kz6un",
+      "Integrity": "eRpKOmD8uOAwnd72MFXHBFR1EX/HIM6mu/uI/2pkKXI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\QR.jpg"
     },
     {
       "Identity": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\images\\quangcao4.jpg",
@@ -5752,167 +5773,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.3avaxze4as.css",
-      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\obj\\Debug\\net9.0\\compressed\\jwf78wtuun-3avaxze4as.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000725689405"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1377"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AJxSzfLBPMSsC6b7WJ4x3taoAjHseUClXP7tJ0kDqDg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 23 Mar 2025 07:22:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"28mPQV77NXMsehlVLCaZIXdB+buca81/uZbp7MG44rE=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3avaxze4as"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-28mPQV77NXMsehlVLCaZIXdB+buca81/uZbp7MG44rE="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.3avaxze4as.css",
-      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4853"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"28mPQV77NXMsehlVLCaZIXdB+buca81/uZbp7MG44rE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 23 Mar 2025 07:22:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3avaxze4as"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-28mPQV77NXMsehlVLCaZIXdB+buca81/uZbp7MG44rE="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.3avaxze4as.css.gz",
-      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\obj\\Debug\\net9.0\\compressed\\jwf78wtuun-3avaxze4as.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1377"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AJxSzfLBPMSsC6b7WJ4x3taoAjHseUClXP7tJ0kDqDg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 23 Mar 2025 07:22:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3avaxze4as"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-AJxSzfLBPMSsC6b7WJ4x3taoAjHseUClXP7tJ0kDqDg="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\HAI\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\9.0.0\\staticwebassets\\css\\site.css",
       "Selectors": [],
@@ -5951,12 +5811,12 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\obj\\Debug\\net9.0\\compressed\\jwf78wtuun-3avaxze4as.gz",
+      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\obj\\Debug\\net9.0\\compressed\\jwf78wtuun-mll8y9fzuo.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000725689405"
+          "Quality": "0.000625782228"
         }
       ],
       "ResponseHeaders": [
@@ -5966,15 +5826,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1377"
+          "Value": "1597"
         },
         {
           "Name": "ETag",
-          "Value": "\"AJxSzfLBPMSsC6b7WJ4x3taoAjHseUClXP7tJ0kDqDg=\""
+          "Value": "\"IT39+fm9re2huj1hlghfONC+PWSItnwh6YZFVMQmIRE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Mar 2025 07:22:37 GMT"
+          "Value": "Fri, 28 Mar 2025 00:31:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5994,13 +5854,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"28mPQV77NXMsehlVLCaZIXdB+buca81/uZbp7MG44rE=\""
+          "Value": "W/\"pgrwFc0FKhiFuy8yKYlqoBloRIC8aFluipIGKaZu2ws=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-28mPQV77NXMsehlVLCaZIXdB+buca81/uZbp7MG44rE="
+          "Value": "sha256-pgrwFc0FKhiFuy8yKYlqoBloRIC8aFluipIGKaZu2ws="
         }
       ]
     },
@@ -6015,7 +5875,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4853"
+          "Value": "6068"
         },
         {
           "Name": "Content-Type",
@@ -6023,11 +5883,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"28mPQV77NXMsehlVLCaZIXdB+buca81/uZbp7MG44rE=\""
+          "Value": "\"pgrwFc0FKhiFuy8yKYlqoBloRIC8aFluipIGKaZu2ws=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Mar 2025 07:22:37 GMT"
+          "Value": "Fri, 28 Mar 2025 00:31:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6037,13 +5897,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-28mPQV77NXMsehlVLCaZIXdB+buca81/uZbp7MG44rE="
+          "Value": "sha256-pgrwFc0FKhiFuy8yKYlqoBloRIC8aFluipIGKaZu2ws="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\obj\\Debug\\net9.0\\compressed\\jwf78wtuun-3avaxze4as.gz",
+      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\obj\\Debug\\net9.0\\compressed\\jwf78wtuun-mll8y9fzuo.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6052,7 +5912,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1377"
+          "Value": "1597"
         },
         {
           "Name": "Content-Type",
@@ -6060,11 +5920,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AJxSzfLBPMSsC6b7WJ4x3taoAjHseUClXP7tJ0kDqDg=\""
+          "Value": "\"IT39+fm9re2huj1hlghfONC+PWSItnwh6YZFVMQmIRE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Mar 2025 07:22:37 GMT"
+          "Value": "Fri, 28 Mar 2025 00:31:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6082,7 +5942,168 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-AJxSzfLBPMSsC6b7WJ4x3taoAjHseUClXP7tJ0kDqDg="
+          "Value": "sha256-IT39+fm9re2huj1hlghfONC+PWSItnwh6YZFVMQmIRE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.mll8y9fzuo.css",
+      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\obj\\Debug\\net9.0\\compressed\\jwf78wtuun-mll8y9fzuo.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000625782228"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1597"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IT39+fm9re2huj1hlghfONC+PWSItnwh6YZFVMQmIRE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:31:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"pgrwFc0FKhiFuy8yKYlqoBloRIC8aFluipIGKaZu2ws=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mll8y9fzuo"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pgrwFc0FKhiFuy8yKYlqoBloRIC8aFluipIGKaZu2ws="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.mll8y9fzuo.css",
+      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6068"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pgrwFc0FKhiFuy8yKYlqoBloRIC8aFluipIGKaZu2ws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:31:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mll8y9fzuo"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pgrwFc0FKhiFuy8yKYlqoBloRIC8aFluipIGKaZu2ws="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.mll8y9fzuo.css.gz",
+      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\obj\\Debug\\net9.0\\compressed\\jwf78wtuun-mll8y9fzuo.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1597"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IT39+fm9re2huj1hlghfONC+PWSItnwh6YZFVMQmIRE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:31:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mll8y9fzuo"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IT39+fm9re2huj1hlghfONC+PWSItnwh6YZFVMQmIRE="
         }
       ]
     },
@@ -16939,6 +16960,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-D03ito2LUmV+WhnjL+k45r0h5vXjPcrQosjB/8M+C0Y="
+        }
+      ]
+    },
+    {
+      "Route": "images/QR.90rv0kz6un.jpg",
+      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\images\\QR.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "180317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eRpKOmD8uOAwnd72MFXHBFR1EX/HIM6mu/uI/2pkKXI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 00:48:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "90rv0kz6un"
+        },
+        {
+          "Name": "label",
+          "Value": "images/QR.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eRpKOmD8uOAwnd72MFXHBFR1EX/HIM6mu/uI/2pkKXI="
+        }
+      ]
+    },
+    {
+      "Route": "images/QR.jpg",
+      "AssetFile": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\images\\QR.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "180317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eRpKOmD8uOAwnd72MFXHBFR1EX/HIM6mu/uI/2pkKXI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 00:48:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eRpKOmD8uOAwnd72MFXHBFR1EX/HIM6mu/uI/2pkKXI="
         }
       ]
     },

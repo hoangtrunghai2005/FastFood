@@ -5,13 +5,6 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<!-- Form tìm kiếm -->
-<form asp-controller="Home" asp-action="Index" method="get" class="mb-3">
-    <div class="input-group">
-        <input type="text" name="tuKhoa" value="@ViewBag.TuKhoa" class="form-control" placeholder="Tìm kiếm món ăn..." />
-        <button class="btn btn-primary" type="submit">Tìm</button>
-    </div>
-</form>
 
 @if (ViewData["DanhSachMonAn"] is IEnumerable<dynamic> danhSachMonAn && danhSachMonAn.Any())
 {

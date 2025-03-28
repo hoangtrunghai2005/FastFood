@@ -79,6 +79,7 @@ wwwroot\images\hotdog.jpg
 wwwroot\images\khoai_tay_chien.jpg
 wwwroot\images\momo.jpg
 wwwroot\images\pizza_hs.jpg
+wwwroot\images\QR.jpg
 wwwroot\images\quangcao4.jpg
 wwwroot\images\quangcao5.jpg
 wwwroot\js\site.js

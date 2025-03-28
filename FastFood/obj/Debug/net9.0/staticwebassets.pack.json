@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\images\\9a882634-03a0-4101-9065-fe1a87a432fa.png"
     },
     {
+      "Id": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\images\\QR.jpg",
+      "PackagePath": "staticwebassets\\images\\QR.jpg"
+    },
+    {
       "Id": "C:\\Users\\HAI\\source\\FastFood\\FastFood\\wwwroot\\images\\b06bbf8a-52bb-4e44-a584-21f3620d513b_Doraemon.jpg",
       "PackagePath": "staticwebassets\\images\\b06bbf8a-52bb-4e44-a584-21f3620d513b_Doraemon.jpg"
     },

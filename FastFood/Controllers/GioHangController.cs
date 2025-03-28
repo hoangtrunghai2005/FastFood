@@ -52,7 +52,6 @@ namespace FastFood.Controllers
 
             var gioHang = GetGioHang();
             var chiTiet = gioHang.FirstOrDefault(c => c.DoAnNhanhID == doAnNhanhId);
-
             if (chiTiet != null)
             {
                 chiTiet.SoLuong += soLuong; // Cộng thêm số lượng
@@ -71,7 +70,56 @@ namespace FastFood.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // Xóa sản phẩm khỏi giỏ hàng
+        // Giảm số lượng sản phẩm trong giỏ hàng
+        public IActionResult GiamSoLuong(int doAnNhanhId)
+        {
+            var gioHang = GetGioHang();
+            var chiTiet = gioHang.FirstOrDefault(c => c.DoAnNhanhID == doAnNhanhId);
+
+            if (chiTiet != null)
+            {
+                if (chiTiet.SoLuong > 1)
+                {
+                    chiTiet.SoLuong--;
+                    TempData["Success"] = "Đã giảm 1 sản phẩm.";
+                }
+                else
+                {
+                    gioHang.Remove(chiTiet);
+                    TempData["Success"] = "Sản phẩm đã được xóa khỏi giỏ hàng.";
+                }
+
+                SaveGioHang(gioHang);
+            }
+            else
+            {
+                TempData["Error"] = "Không tìm thấy sản phẩm trong giỏ hàng.";
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // Tăng số lượng sản phẩm trong giỏ hàng
+        public IActionResult TangSoLuong(int doAnNhanhId)
+        {
+            var gioHang = GetGioHang();
+            var chiTiet = gioHang.FirstOrDefault(c => c.DoAnNhanhID == doAnNhanhId);
+
+            if (chiTiet != null)
+            {
+                chiTiet.SoLuong++;
+                SaveGioHang(gioHang);
+                TempData["Success"] = "Đã tăng 1 sản phẩm.";
+            }
+            else
+            {
+                TempData["Error"] = "Không tìm thấy sản phẩm trong giỏ hàng.";
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // Xóa hoàn toàn sản phẩm khỏi giỏ hàng
         public IActionResult XoaSanPham(int doAnNhanhId)
         {
             var gioHang = GetGioHang();
@@ -81,7 +129,7 @@ namespace FastFood.Controllers
             {
                 gioHang.Remove(chiTiet);
                 SaveGioHang(gioHang);
-                TempData["Success"] = "Sản phẩm đã được xóa khỏi giỏ hàng.";
+                TempData["Success"] = "Sản phẩm đã được xóa hoàn toàn khỏi giỏ hàng.";
             }
             else
             {
@@ -97,7 +145,6 @@ namespace FastFood.Controllers
         public IActionResult ThanhToan(string tenKhachHang, string diaChi, string soDienThoai, string phuongThucThanhToan)
         {
             var gioHang = GetGioHang();
-
             if (gioHang == null || !gioHang.Any())
             {
                 TempData["Error"] = "Giỏ hàng của bạn đang trống. Vui lòng thêm sản phẩm.";
@@ -120,7 +167,6 @@ namespace FastFood.Controllers
                 PhuongThucThanhToan = phuongThucThanhToan,
                 NgayDat = System.DateTime.Now
             };
-
             _context.DonHangs.Add(donHang);
             _context.SaveChanges();
 
@@ -135,16 +181,13 @@ namespace FastFood.Controllers
                 };
                 _context.Set<ChiTietDonHang>().Add(chiTiet);
             }
-
             _context.SaveChanges();
 
             // Xóa giỏ hàng sau khi thanh toán thành công
             HttpContext.Session.Remove("GioHang");
-
             TempData["Success"] = "Thanh toán thành công! Đơn hàng của bạn đã được lưu.";
             return RedirectToAction(nameof(Index));
         }
-
 
         // Lấy giỏ hàng từ Session
         private List<ChiTietDonHang> GetGioHang()

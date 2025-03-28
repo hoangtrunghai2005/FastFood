@@ -404,4 +404,5 @@ C:\Users\HAI\source\FastFood\FastFood\obj\Debug\net9.0\compressed\a3ygkwa5zy-2z0
 C:\Users\HAI\source\FastFood\FastFood\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\HAI\source\FastFood\FastFood\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\HAI\source\FastFood\FastFood\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
-C:\Users\HAI\source\FastFood\FastFood\obj\Debug\net9.0\compressed\jwf78wtuun-3avaxze4as.gz
+C:\Users\HAI\source\FastFood\FastFood\obj\Debug\net9.0\FastFood.sourcelink.json
+C:\Users\HAI\source\FastFood\FastFood\obj\Debug\net9.0\compressed\jwf78wtuun-mll8y9fzuo.gz

@@ -15,6 +15,7 @@ namespace FastFood.Models  // Hoặc QL_doannhanh.Models nếu tên dự án kh�
         public string MoTa { get; set; } = null!;
 
         [Required(ErrorMessage = "Giá không được để trống")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Gia { get; set; }
 
         // Lưu đường dẫn hình ảnh; nếu không có file upload, mặc định là /images/default.jpg
