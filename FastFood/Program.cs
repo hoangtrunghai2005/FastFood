@@ -25,7 +25,7 @@ builder.Services.AddDefaultIdentity<FastFoodUser>(options =>
 // Cấu hình Session
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn Session
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn session
     options.Cookie.HttpOnly = true; // Cookie chỉ truy cập qua HTTP
     options.Cookie.IsEssential = true; // Cookie cần thiết để Session hoạt động
 });
@@ -46,8 +46,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-// Kích hoạt Middleware Session
-app.UseSession();
+app.UseSession(); // Kích hoạt session middleware
 
 app.UseAuthentication(); // Kích hoạt Authentication Middleware
 app.UseAuthorization(); // Kích hoạt Authorization Middleware

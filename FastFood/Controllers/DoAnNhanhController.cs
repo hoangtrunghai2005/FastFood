@@ -24,9 +24,40 @@ namespace FastFood.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
+        // GET: DoAnNhanh/Password
+        [HttpGet]
+        public IActionResult Password()
+        {
+            return View();
+        }
+
+        // POST: DoAnNhanh/Password
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Password(string inputPassword)
+        {
+            // Mật khẩu cố định để truy cập DoAnNhanh
+            const string requiredPassword = "doannhanh123";
+
+            if (inputPassword == requiredPassword)
+            {
+                HttpContext.Session.SetString("AccessGranted", "true"); // Lưu trạng thái vào session
+                return RedirectToAction(nameof(Index));
+            }
+
+            ViewBag.ErrorMessage = "Mật khẩu không đúng. Vui lòng thử lại!";
+            return View();
+        }
+
         // GET: DoAnNhanh
         public async Task<IActionResult> Index(string? tuKhoa = null)
         {
+            // Kiểm tra nếu chưa nhập mật khẩu đúng
+            if (HttpContext.Session.GetString("AccessGranted") != "true")
+            {
+                return RedirectToAction(nameof(Password));
+            }
+
             var danhSachDoAnNhanh = _context.DoAnNhanhs.Include(d => d.DanhMuc).AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(tuKhoa))
@@ -42,6 +73,12 @@ namespace FastFood.Controllers
         // GET: Details
         public async Task<IActionResult> Details(int? id)
         {
+            // Yêu cầu phải có session AccessGranted để truy cập
+            if (HttpContext.Session.GetString("AccessGranted") != "true")
+            {
+                return RedirectToAction(nameof(Password));
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -61,6 +98,11 @@ namespace FastFood.Controllers
         // GET: Create
         public IActionResult Create()
         {
+            if (HttpContext.Session.GetString("AccessGranted") != "true")
+            {
+                return RedirectToAction(nameof(Password));
+            }
+
             ViewData["DanhMucID"] = new SelectList(_context.DanhMucs, "DanhMucID", "TenDanhMuc");
             return View();
         }
@@ -70,6 +112,11 @@ namespace FastFood.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,MonAn,MoTa,Gia,ImageFile,DanhMucID")] DoAnNhanh doAnNhanh)
         {
+            if (HttpContext.Session.GetString("AccessGranted") != "true")
+            {
+                return RedirectToAction(nameof(Password));
+            }
+
             if (ModelState.IsValid)
             {
                 if (doAnNhanh.ImageFile != null)
@@ -98,6 +145,11 @@ namespace FastFood.Controllers
         // GET: Edit
         public async Task<IActionResult> Edit(int? id)
         {
+            if (HttpContext.Session.GetString("AccessGranted") != "true")
+            {
+                return RedirectToAction(nameof(Password));
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -118,6 +170,11 @@ namespace FastFood.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,MonAn,MoTa,Gia,HinhAnhUrl,DanhMucID")] DoAnNhanh doAnNhanh)
         {
+            if (HttpContext.Session.GetString("AccessGranted") != "true")
+            {
+                return RedirectToAction(nameof(Password));
+            }
+
             if (id != doAnNhanh.ID)
             {
                 return NotFound();
@@ -151,6 +208,11 @@ namespace FastFood.Controllers
         // GET: Delete
         public async Task<IActionResult> Delete(int? id)
         {
+            if (HttpContext.Session.GetString("AccessGranted") != "true")
+            {
+                return RedirectToAction(nameof(Password));
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -172,6 +234,11 @@ namespace FastFood.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (HttpContext.Session.GetString("AccessGranted") != "true")
+            {
+                return RedirectToAction(nameof(Password));
+            }
+
             var doAnNhanh = await _context.DoAnNhanhs.FindAsync(id);
             if (doAnNhanh != null)
             {
